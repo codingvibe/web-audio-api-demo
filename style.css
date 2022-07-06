@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+}
+
+.controls {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.control {
+    display:flex;
+    flex-direction: column;
+}
+
+.node-control {
+    height:30px
+}
+
+#filterInterface {
+    margin-right: 20px;
+    min-width: 150px;
+}
+
+#audioDemo {
+    width: 100%;
+    align-items: flex-end;
+}
+
+.close-button {
+    max-width: 100%;
+    height: 25px;
+    cursor: pointer;
+}
+
+.audio-input {
+    width: 70%;
+}
+
+.control div {
+    margin: 5px 0px 5px 0px;
+}
+
+.control button {
+    margin: 5px 0px 5px 0px;
+}

@@ -1,0 +1,33 @@
+
+<!doctype html>
+  <html>
+    <head>
+      <title>Web Audio API Demo</title>
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <script src="./main.js"></script>
+  <body>
+    <canvas id="visualizer"></canvas>
+    <div class="controls">
+      <div id="filterInterface" class="control">
+        <div id="streamAudioSelect">
+          <label for="streamPath"> Stream from URL: </label>
+          <input class="audio-input" type="text" id="streamPath" name="streamPath" value="https://usa9.fastcast4u.com/proxy/jamz?mp=/1">
+          <button type="button" onclick="useAudioStream()">Submit</button>
+        </div>
+        <div>
+          <label for="filePath"> Local File (under 32MB): </label>
+          <input class="audio-input" type="file" id="filePath" name="filePath" onchange="useFileStream()">
+        </div>
+        <button type="button" onclick="addNode(generateRandomId('gain'), 'gain');">+ Gain</button>
+        <button type="button" onclick="addNode(generateRandomId('lpf'), 'lpf');">+ Low Pass Filter</button>
+        <button type="button" onclick="addNode(generateRandomId('hpf'), 'hpf');">+ High Pass Filter</button>
+        <button type="button" onclick="addNode(generateRandomId('reverb'), 'reverb');">+ Reverb</button>
+        <button type="button" onclick="addNode(generateRandomId('pan'), 'pan');">+ Pan</button>
+      </div>
+      <div id="audioDemo" class="control">
+        <audio id="player" crossorigin="anonymous" src="https://usa9.fastcast4u.com/proxy/jamz?mp=/1" autoplay="true" loop="true"></audio>
+      </div>
+    </div>
+  </body>
+</html>
